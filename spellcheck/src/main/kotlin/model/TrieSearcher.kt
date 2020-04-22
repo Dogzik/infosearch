@@ -60,7 +60,6 @@ class TrieSearcher(
         .flatten()
         .toList()
     )
-    res.addAll(getActionsForEdge(null, null, replacements, insertions, removals))
     return res.distinct()
   }
 
@@ -103,7 +102,7 @@ class TrieSearcher(
               newNode,
               newWord,
               curChanges,
-              prevAction,
+              action,
               endingSize,
               replacements,
               insertions,
